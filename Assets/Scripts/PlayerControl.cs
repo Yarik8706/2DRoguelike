@@ -7,8 +7,7 @@ public class PlayerControl : MonoBehaviour
     public bool isTurnRight = true;
 
     private Animator _animator;
-    public Transform cameraPos;
-
+    
     private void Start()
     {
         _animator = GetComponent<Animator>();
