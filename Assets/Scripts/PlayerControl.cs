@@ -5,11 +5,13 @@ public class PlayerControl : MonoBehaviour
 {
     public int speed;
     public bool isTurnRight = true;
-
+    
+    private Rigidbody2D _rigidbody2D;
     private Animator _animator;
     
     private void Start()
     {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
 
@@ -46,6 +48,6 @@ public class PlayerControl : MonoBehaviour
 
         _animator.SetBool("isIdle", nextVector3 == Vector3.zero);
 
-        transform.position += nextVector3;
+        _rigidbody2D.MovePosition(transform.position + nextVector3);
     }
 }
