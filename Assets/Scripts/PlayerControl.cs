@@ -1,13 +1,22 @@
 using System;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public interface IEssence
+{
+    public void GetDamage();
+}
+
+public class PlayerControl : MonoBehaviour, IEssence
 {
     public int speed;
     public bool isTurnRight = true;
+    public Animator effectsAnimator;
+    public float timeAttackCooldown = 0.9f;
+    public LayerMask enemyLayer;
     
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+    private float _activeTimeAttackCooldown;
     
     private void Start()
     {
@@ -25,6 +34,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        _activeTimeAttackCooldown -= Time.deltaTime;
         Vector3 nextVector3 = Vector3.zero;
         if (Input.GetKey("w"))
         {
@@ -46,8 +56,30 @@ public class PlayerControl : MonoBehaviour
             nextVector3 += Vector3.right * speed * Time.deltaTime;
         }
 
+        if (Input.GetMouseButtonDown(0) && _activeTimeAttackCooldown < 0)
+        {
+            _activeTimeAttackCooldown = timeAttackCooldown;
+            Attack();
+        }
+
         _animator.SetBool("isIdle", nextVector3 == Vector3.zero);
 
         _rigidbody2D.MovePosition(transform.position + nextVector3);
+    }
+
+    public void GetDamage()
+    {
+        Debug.Log("Player attacked");
+    }
+
+    public void Attack()
+    {
+        effectsAnimator.SetTrigger("Attack");
+        var colliders = Physics2D.OverlapBoxAll(effectsAnimator.transform.position, 
+            Vector2.one, 0f,enemyLayer);
+        foreach (var raycastHit2D in colliders)
+        {
+            raycastHit2D.attachedRigidbody.GetComponent<IEssence>().GetDamage();
+        }
     }
 }

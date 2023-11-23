@@ -22,18 +22,10 @@ public class SeveralVariants : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-
-        // code
-        if (lamp != null) 
+        
+        if (lamp != null && Random.Range(0, 6) == 1)
         {
-            if (Random.Range(0, 6) == 1)
-            {
-                Instantiate(lamp, transform.position, Quaternion.identity);
-            }
+            Instantiate(lamp, transform.position, Quaternion.identity);
         }
-
-        //TODO: сделать пол и его рандомную смену текстуры
-        //TODO: сделать лампу с анимацией 
-        //TODO: сделать появление лампы на стене 
     }
 }
