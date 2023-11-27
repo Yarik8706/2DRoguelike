@@ -2481,6 +2481,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1687162663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687162657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd214935419c704f8c8a312f70b5f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeAttackCooldown: 2
 --- !u!1001 &1794918564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2736,6 +2749,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1169432186}
     m_Modifications:
+    - target: {fileID: 2679729560094713936, guid: 7695aa266dd7afc4d993dec1553666de, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679729560094713936, guid: 7695aa266dd7afc4d993dec1553666de, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1684200435
+      objectReference: {fileID: 0}
     - target: {fileID: 2679729560094713938, guid: 7695aa266dd7afc4d993dec1553666de, type: 3}
       propertyPath: m_Name
       value: Trap
