@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IEssence
 {
-    public void GetDamage();
+    public void GetDamage(int damage);
 }
 
 public class PlayerControl : MonoBehaviour, IEssence
@@ -13,13 +13,16 @@ public class PlayerControl : MonoBehaviour, IEssence
     public Animator effectsAnimator;
     public float timeAttackCooldown = 0.9f;
     public LayerMask enemyLayer;
-    
+    public int damage;
+
+    private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
     private float _activeTimeAttackCooldown;
     
     private void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
@@ -64,12 +67,18 @@ public class PlayerControl : MonoBehaviour, IEssence
 
         _animator.SetBool("isIdle", nextVector3 == Vector3.zero);
 
-        _rigidbody2D.MovePosition(transform.position + nextVector3);
+        _rigidbody2D.MovePosition(transform.position + nextVector3 * speed);
     }
 
-    public void GetDamage()
+    public void GetDamage(int damage)
     {
-        Debug.Log("Player attacked");
+        _spriteRenderer.color = Color.red;
+        Invoke(nameof(SetPlayerWhiteColor), 0.5f);
+    }
+
+    public void SetPlayerWhiteColor()
+    {
+        _spriteRenderer.color = Color.white;
     }
 
     public void Attack()
@@ -79,7 +88,7 @@ public class PlayerControl : MonoBehaviour, IEssence
             Vector2.one, 0f,enemyLayer);
         foreach (var raycastHit2D in colliders)
         {
-            raycastHit2D.attachedRigidbody.GetComponent<IEssence>().GetDamage();
+            raycastHit2D.attachedRigidbody.GetComponent<IEssence>().GetDamage(damage);
         }
     }
 }

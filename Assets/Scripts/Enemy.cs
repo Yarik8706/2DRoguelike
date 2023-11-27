@@ -2,7 +2,7 @@
 
 public class Enemy : MonoBehaviour, IEssence
 {
-    public void GetDamage()
+    public void GetDamage(int damage)
     {
         Debug.Log("Attack");
     }
