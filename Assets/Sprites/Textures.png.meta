@@ -1157,6 +1157,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: HealthBar
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 90
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f06bf542dab36045b01d1484a3645dd
+      internalID: -1001722386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1168,55 +1189,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack1: -418646611
-      Attack2: -188715641
-      Attack3: -1687513358
-      Enemy: 1980695045
-      HeroIdle1: -270683214
-      HeroIdle2: -77843960
-      HeroIdle3: 69951510
-      HeroIdle4: 1018822608
-      HeroIdle5: 1659623084
-      HeroIdle6: 2081878621
-      HeroRun1: -316061841
-      HeroRun2: 231404150
-      HeroRun3: -2074918237
-      HeroRun4: -1692589697
-      HeroRun5: 1259673304
-      HeroRun6: 867953344
-      Null: 239055774
-      floor1: 833056050
-      floor10: 1504817245
-      floor2: 1781484276
-      floor3: 997066844
-      floor4: -1058667180
-      floor5: 593435680
-      floor6: 2111494957
-      floor7: -1137563548
-      floor8: -1126482670
-      floor9: -1514296859
       lamp1: -1007120126
-      lamp2: 835361295
-      lamp3: -2093431818
-      lamp4: 1934480373
-      lamp5: -492379462
-      lamp6: 480265553
-      trap1: -1931612314
-      trap2: 266903614
-      trap3: -642032101
-      trap4: -1712016420
-      trap5: -332738023
-      trap6: -698116609
-      wall1: -187543075
-      wall1_left: 1625791598
-      wall1_right: -767044100
+      floor8: -1126482670
+      Attack2: -188715641
       wall2: -1331851066
       wall2_left: 1203657035
+      HeroIdle4: 1018822608
+      HeroRun6: 867953344
+      trap3: -642032101
+      trap4: -1712016420
+      lamp6: 480265553
+      lamp2: 835361295
+      trap6: -698116609
+      HeroIdle2: -77843960
+      lamp4: 1934480373
+      HeroRun3: -2074918237
       wall2_right: 1998553668
-      wall3: 843419955
-      wall4: 2070004298
+      Attack1: -418646611
       wall5: 312409861
+      HeroIdle6: 2081878621
+      floor2: 1781484276
+      lamp5: -492379462
+      Enemy: 1980695045
+      floor5: 593435680
+      Null: 239055774
+      floor6: 2111494957
+      lamp3: -2093431818
+      trap1: -1931612314
+      floor4: -1058667180
       wall6: 227595314
+      HeroIdle5: 1659623084
+      HeroRun1: -316061841
+      floor1: 833056050
+      wall4: 2070004298
+      wall1_right: -767044100
+      HeroRun2: 231404150
+      HeroIdle1: -270683214
+      trap5: -332738023
+      HeroRun5: 1259673304
+      HeroRun4: -1692589697
+      floor3: 997066844
+      trap2: 266903614
+      wall1: -187543075
+      wall3: 843419955
+      floor7: -1137563548
+      wall1_left: 1625791598
+      floor10: 1504817245
+      floor9: -1514296859
+      Attack3: -1687513358
+      HealthBar: -1001722386
+      HeroIdle3: 69951510
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
