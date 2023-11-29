@@ -20,10 +20,10 @@ public class SeveralVariants : MonoBehaviour
 
         if (isTurnY && Random.Range(0, 2) == 1)
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipY = true;
         }
         
-        if (lamp != null && Random.Range(0, 6) == 1)
+        if (lamp != null && Random.Range(0, 2) == 1)
         {
             Instantiate(lamp, transform.position, Quaternion.identity);
         }
