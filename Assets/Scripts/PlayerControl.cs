@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public interface IEssence
 {
@@ -14,6 +15,8 @@ public class PlayerControl : MonoBehaviour, IEssence
     public float timeAttackCooldown = 0.9f;
     public LayerMask enemyLayer;
     public int damage;
+    public int health = 100;
+    public Slider healthBar;
 
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
@@ -25,6 +28,8 @@ public class PlayerControl : MonoBehaviour, IEssence
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        healthBar.maxValue = health;
+        healthBar.value = health;
     }
 
     public void Flip()
@@ -74,6 +79,8 @@ public class PlayerControl : MonoBehaviour, IEssence
     {
         _spriteRenderer.color = Color.red;
         Invoke(nameof(SetPlayerWhiteColor), 0.5f);
+        healthBar.value -= damage;
+        health -= damage;
     }
 
     public void SetPlayerWhiteColor()

@@ -23,7 +23,7 @@ public class SeveralVariants : MonoBehaviour
             spriteRenderer.flipY = true;
         }
         
-        if (lamp != null && Random.Range(0, 2) == 1)
+        if (lamp != null && Random.Range(0, 3) == 1)
         {
             Instantiate(lamp, transform.position, Quaternion.identity);
         }
