@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,9 @@ public class PlayerControl : MonoBehaviour, IEssence
     public int damage;
     public int health = 100;
     public Slider healthBar;
+    public TMP_Text keysCountText;
 
+    private int _keysCount;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
@@ -30,6 +33,7 @@ public class PlayerControl : MonoBehaviour, IEssence
         _animator = GetComponent<Animator>();
         healthBar.maxValue = health;
         healthBar.value = health;
+        UpdateKeysCountTextState();
     }
 
     public void Flip()
@@ -81,6 +85,25 @@ public class PlayerControl : MonoBehaviour, IEssence
         Invoke(nameof(SetPlayerWhiteColor), 0.5f);
         healthBar.value -= damage;
         health -= damage;
+    }
+
+    public void AddKey()
+    {
+        _keysCount++;
+        UpdateKeysCountTextState();
+    }
+
+    [ContextMenu("RemoveKey")]
+    public void RemoveKey()
+    {
+        if(_keysCount != 0) _keysCount--;
+        UpdateKeysCountTextState();
+    }
+
+    private void UpdateKeysCountTextState()
+    {
+        keysCountText.text = "Ключей: " + _keysCount;
+        keysCountText.gameObject.SetActive(_keysCount != 0);
     }
 
     public void SetPlayerWhiteColor()
