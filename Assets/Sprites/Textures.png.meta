@@ -1187,7 +1187,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1195,6 +1195,69 @@ TextureImporter:
       bones: []
       spriteID: db223de8bc4b19b459ca0ee29995830a
       internalID: -1854652374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potion1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfeaa1578283864eb040f926af7e742
+      internalID: -442665964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potion2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690b047b324c78f45b9130834af7df64
+      internalID: 1412795672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potion3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e39c9a8d4ed04b46a7fc0a19173fe90
+      internalID: -1315620597
       vertices: []
       indices: 
       edges: []
@@ -1210,57 +1273,60 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lamp1: -1007120126
-      floor8: -1126482670
+      Attack1: -418646611
       Attack2: -188715641
-      wall2: -1331851066
-      wall2_left: 1203657035
+      Attack3: -1687513358
+      Enemy: 1980695045
+      HealthBar: -1001722386
+      HeroIdle1: -270683214
+      HeroIdle2: -77843960
+      HeroIdle3: 69951510
       HeroIdle4: 1018822608
+      HeroIdle5: 1659623084
+      HeroIdle6: 2081878621
+      HeroRun1: -316061841
+      HeroRun2: 231404150
+      HeroRun3: -2074918237
+      HeroRun4: -1692589697
+      HeroRun5: 1259673304
       HeroRun6: 867953344
+      Key: -1854652374
+      Null: 239055774
+      Potion1: -442665964
+      Potion2: 1412795672
+      Potion3: -1315620597
+      floor1: 833056050
+      floor10: 1504817245
+      floor2: 1781484276
+      floor3: 997066844
+      floor4: -1058667180
+      floor5: 593435680
+      floor6: 2111494957
+      floor7: -1137563548
+      floor8: -1126482670
+      floor9: -1514296859
+      lamp1: -1007120126
+      lamp2: 835361295
+      lamp3: -2093431818
+      lamp4: 1934480373
+      lamp5: -492379462
+      lamp6: 480265553
+      trap1: -1931612314
+      trap2: 266903614
       trap3: -642032101
       trap4: -1712016420
-      lamp6: 480265553
-      lamp2: 835361295
-      trap6: -698116609
-      HeroIdle2: -77843960
-      lamp4: 1934480373
-      HeroRun3: -2074918237
-      wall2_right: 1998553668
-      Attack1: -418646611
-      wall5: 312409861
-      HeroIdle6: 2081878621
-      floor2: 1781484276
-      lamp5: -492379462
-      Enemy: 1980695045
-      floor5: 593435680
-      Null: 239055774
-      floor6: 2111494957
-      lamp3: -2093431818
-      trap1: -1931612314
-      floor4: -1058667180
-      wall6: 227595314
-      HeroIdle5: 1659623084
-      HeroRun1: -316061841
-      floor1: 833056050
-      wall4: 2070004298
-      wall1_right: -767044100
-      HeroRun2: 231404150
-      HeroIdle1: -270683214
       trap5: -332738023
-      HeroRun5: 1259673304
-      HeroRun4: -1692589697
-      floor3: 997066844
-      trap2: 266903614
+      trap6: -698116609
       wall1: -187543075
-      wall3: 843419955
-      floor7: -1137563548
       wall1_left: 1625791598
-      floor10: 1504817245
-      floor9: -1514296859
-      Key: -1854652374
-      Attack3: -1687513358
-      HealthBar: -1001722386
-      HeroIdle3: 69951510
+      wall1_right: -767044100
+      wall2: -1331851066
+      wall2_left: 1203657035
+      wall2_right: 1998553668
+      wall3: 843419955
+      wall4: 2070004298
+      wall5: 312409861
+      wall6: 227595314
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
